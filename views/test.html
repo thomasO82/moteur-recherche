@@ -1,0 +1,26 @@
+{% set title = "Indexation" %}
+<link href="./main.css" rel="stylesheet" />
+<body>
+	<div>
+		{% include '_header.html.twig' %}
+	</div>
+	<section class="center">
+		{% if error %}
+		<p> Veuillez entrer une URL valide </p>
+		{% endif %}
+		<form action="/" method="post">
+			<div>
+				<label for="url">
+					<input id='url' name='url' type="text">
+			</div>
+			<div>
+				<input type="submit" value="Envoyer">
+			</div>
+		</form>
+		<div class='border'>
+			{% for url in listUrls %}
+			<li>{{ url }}</li><br>
+			{% endfor %}
+		</div>
+		<script src="./main.js"></script>
+</body>

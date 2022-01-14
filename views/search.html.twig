@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Indexation</title>
+		<link href="./main.css" rel="stylesheet"/>
+	</head>
+	<body>
+		{% set title = "Recherche" %}
+		<header>
+			{% include '_header.html.twig' %}
+		</header>
+		<section>
+			<h2>Entrez le mot que vous souhaitez rechercher</h2>
+			<div class"error">
+				{% if error %}
+				<p class="error-url"> le mot n'est pas valide </p>
+				{% endif %}
+			</div>	
+			<form action="/search" method="post">
+				<div>
+					<label for="word">
+					<input id='word' name='word' type="text">
+				</div>
+				<div>
+					<input type="submit" value="Envoyer">
+				</div>
+			</form>
+			<div class="border">
+				<ol>
+				{% for page in pageArray %}
+						<b><li>le mot {{page.word}} apparait {{page.count}} fois sur le site {{page.url}}</li><b>
+				{% endfor %}
+				</ol>
+			</div>
+		</section>
+		<script src="./main.js"></script>
+	</body>
+</html>

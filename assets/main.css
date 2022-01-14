@@ -1,0 +1,68 @@
+form{
+    text-align: center;
+    margin: auto;
+}
+
+form *{
+    margin-bottom: 10px;
+}
+
+.input-text {
+    width: 400px;
+}
+
+.border{
+    margin: auto;
+    width: 60%;
+    border: 2px solid black;
+    text-align: start;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+.border ol{
+    margin-top: 10px;
+}
+
+.border{
+    min-height: 20px;
+}
+
+.border ol li{
+    margin: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    padding: 0%;
+}
+
+nav li{
+    list-style: none;
+    display:inline;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: gray;
+
+}
+
+nav li a{
+text-decoration: none;
+color: black;
+
+}
+
+header{
+    margin-bottom: 200px;
+}
+
+
+.error-url{
+    color: red;
+    text-align: center;
+}
